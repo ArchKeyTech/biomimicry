@@ -23,6 +23,7 @@ to address and solve human technological problems. This website serves to educat
 
 
 **CLONE REPOSITORY TO YOUR LOCAL MACHINE**
+
 Follow the steps below to store the website's files locally:
 
 
@@ -38,6 +39,7 @@ Follow the steps below to store the website's files locally:
 
 
 **HOW TO USE**
+
 The website is just like any other regular ones. Navigate through the different pages using either the menu
 items in the navigation bar or click the hamburger menu icon in the top right.
 
