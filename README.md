@@ -55,5 +55,7 @@ can be accessed from the 'Storage' page.
 
 -There is message input field in the 'About Me' page for users to share or interact with me and sign up to a newsletter (not functional yet)
 
+![plot](./images/biomimic2.png)
 ![plot](./images/biomimic1.png)
+![plot](./images/biomimic3.png)
 
