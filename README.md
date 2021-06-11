@@ -6,10 +6,6 @@ This is a website I made to share my passion on the topic of Biomimicry. Biomimi
 to address and solve human technological problems. This website serves to educate and inspire designers, inventors, creatives and people from any walk of life.
 
 
-
-
-
-
 **CONTENT OF WEBPAGE**
 
 -HOME: the introductory page giving the viewer an idea of what Biomimicry is and explaining how it is applied in real life.
@@ -26,10 +22,6 @@ to address and solve human technological problems. This website serves to educat
 
 
 
-
-
-
-
 **CLONE REPOSITORY TO YOUR LOCAL MACHINE**
 Follow the steps below to store the website's files locally:
 
@@ -41,10 +33,6 @@ Follow the steps below to store the website's files locally:
 -step3: Open your terminal and navigate to the desired directory
 
 -step4: In terminal, type 'git clone' followed by the URL link you have pasted and press Enter
-
-
-
-
 
 
 
