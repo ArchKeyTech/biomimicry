@@ -54,3 +54,6 @@ can be accessed from the 'Storage' page.
 -Some items like articles and texts can be 'liked' by clicking on the hearts next to them.
 
 -There is message input field in the 'About Me' page for users to share or interact with me and sign up to a newsletter (not functional yet)
+
+![plot](./images/biomimic1.png)
+
