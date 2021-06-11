@@ -1,0 +1,25 @@
+/*a file with settings/configurations used to style
+which are reused within the main.scss file*/
+
+$primary-color: gray; //variable for gray color set as primary color
+$secondary-color: orange; // variable for orange color set as secondary color
+$blue-filter: invert(46%) sepia(99%) saturate(1449%) hue-rotate(176deg)
+  brightness(100%) contrast(91%); // creating a blue filter for svg icons (similar to twitter. might not be used in this project)
+
+$orange-filter: invert(69%) sepia(22%) saturate(7213%) hue-rotate(2deg)
+  brightness(108%) contrast(102%); //creating an orange filter for svg icons
+
+$heart-filter: invert(25%) sepia(43%) saturate(6766%) hue-rotate(288deg)
+  brightness(114%) contrast(115%); //red filter for like(heart) icon
+
+* {
+  //sizing of box and removing all inherent margin and padding from page
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+@mixin transition-ease {
+  /* a mixin that will be used to control transition action of colors etc*/
+  transition: all 0.3s ease-in-out;
+}

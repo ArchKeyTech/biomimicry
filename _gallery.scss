@@ -1,0 +1,139 @@
+/*this scss is used to style the content of the 'Gallery' page
+of the website*/
+
+.gallery {
+  /*styling the gallery section which holds all the main content of the 'Gallery' page*/
+  height: auto;
+  padding-top: 40vh;
+  border-bottom: 2px solid white;
+  background: linear-gradient(
+      to right,
+      rgba($secondary-color, 0.3),
+      rgba($primary-color, 0.4)
+    ),
+    url("../images/flower.jpg") center top; // add image of flower to background
+  background-size: contain; //adjust how image is displayed in section
+  &__table {
+    //styling the table containing the text and images
+    margin-left: 150px;
+    display: inline-block;
+    border-collapse: collapse;
+    width: auto;
+    &--img {
+      //styling the images in the tables, their sizes and color & hovering effect
+      border: 2px solid white;
+      width: 300px;
+      height: 300px;
+      &:hover {
+        cursor: pointer;
+        border: 6px solid orange;
+      }
+    }
+  }
+  &__heading {
+    //styling the 'Gallery' heading's size,position and color
+    margin-left: 400px;
+    padding-bottom: 30px;
+    font-size: 50px;
+    margin-bottom: 2rem;
+    color: orangered;
+  }
+}
+
+td,
+th {
+  // styling the table data's and table head's color, border and position
+  color: black;
+  border: 1px solid #dddddd;
+  text-align: center;
+  padding: 8px;
+}
+
+tr {
+  //styling table row background color
+  background-color: rgba($primary-color, 0.5);
+}
+
+.notice {
+  //styling of ownership text under table
+  margin-left: 150px;
+}
+
+.external_link {
+  //styling of external links within the table's 'sector' column
+  text-decoration: none;
+  font-weight: bold;
+  color: orangered;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.innovations {
+  // styling of the innovations text's color
+  color: white;
+}
+
+.Comments {
+  display: flex;
+  height: 80%;
+  justify-content: center;
+  align-items: center;
+  background-color: whitesmoke;
+  &__container {
+    width: 500px;
+    border: 2px solid black;
+    border-radius: 20px;
+    padding: 15px 15px;
+  }
+  &__container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+}
+
+textarea {
+  height: 30px;
+  width: 100%;
+  border: none;
+  margin-bottom: 10px;
+  //resize: none;
+  outline: none;
+}
+
+#comment,
+#cancel {
+  padding: 10px 10px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#comment {
+  color: white;
+  background-color: orange;
+  display: none;
+}
+
+#cancel {
+  color: #333;
+  background-color: silver;
+}
+
+.usr_comments {
+  background-color: white;
+  color: black;
+  text-decoration: none;
+  list-style: none;
+}
+
+#name {
+  height: 30px;
+  border: none;
+  //margin-bottom: 10px;
+  //resize: none;
+  outline: none;
+}

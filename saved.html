@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Saved</title>
+    <link rel="stylesheet" href="scss/main.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!--adding main scss file -->
+  </head>
+  <body>
+    <header class="header_home">
+      <!-- creating a header for menu items -->
+      <div class="menu-button">
+        <!-- div element to store future menu button-->
+        <span class="menu-button__burger"></span
+        ><!--span element where is placed menu button -->
+      </div>
+      <nav class="nav">
+        <!--nav bar containing list of menu items -->
+        <ul class="menu-nav">
+          <li class="menu-nav__item">
+            <a href="index.html" class="menu-nav__link"
+              ><img class="home-icon" src="images/home0.svg"
+            /></a>
+            <!--icons for menu item -->
+            <a href="index.html" class="menu-nav__link"> Home </a>
+            <!--each menu item has a link to its corresponding page -->
+          </li>
+          <li class="menu-nav__item">
+            <a href="aboutme.html" class="menu-nav__link"
+              ><img class="home-icon" src="images/profile.svg"
+            /></a>
+            <a href="aboutme.html" class="menu-nav__link"> About Me </a>
+          </li>
+          <li class="menu-nav__item">
+            <a href="gallery.html" class="menu-nav__link"
+              ><img class="home-icon" src="images/media.svg"
+            /></a>
+            <a href="gallery.html" class="menu-nav__link"> Gallery </a>
+          </li>
+          <li class="menu-nav__item active">
+            <a href="saved.html" class="menu-nav__link"
+              ><img class="home-icon" src="images/folder1.svg"
+            /></a>
+            <a href="saved.html" class="menu-nav__link"> Storage </a>
+          </li>
+        </ul>
+      </nav>
+      <nav class="nav1">
+        <!--clone of nav bar containing list of menu items (used for the menu button) -->
+        <ul class="menu-nav1">
+          <li class="menu-nav1__item">
+            <a href="index.html" class="menu-nav__link"
+              ><img class="home-icon" src="images/home0.svg"
+            /></a>
+            <!--icons for menu item -->
+            <a href="index.html" class="menu-nav__link"> Home </a>
+            <!--each menu item has a link to its corresponding page -->
+          </li>
+          <li class="menu-nav1__item">
+            <a href="aboutme.html" class="menu-nav__link"
+              ><img class="home-icon" src="images/profile.svg"
+            /></a>
+            <a href="aboutme.html" class="menu-nav__link"> About Me </a>
+          </li>
+          <li class="menu-nav1__item">
+            <a href="gallery.html" class="menu-nav__link"
+              ><img class="home-icon" src="images/media.svg"
+            /></a>
+            <a href="gallery.html" class="menu-nav__link"> Gallery </a>
+          </li>
+          <li class="menu-nav1__item active">
+            <a href="saved.html" class="menu-nav__link"
+              ><img class="home-icon" src="images/folder1.svg"
+            /></a>
+            <a href="saved.html" class="menu-nav__link"> Storage </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="saved">
+        <!--creating 'Gallery' section -->
+        <h2 class="saved__heading">Saved For Later</h2>
+        <!--'Gallery' heading -->
+        <fieldset>
+          <legend>Storage</legend>
+          <div id="mystorage"></div>
+        </fieldset>
+        <div class="social-icons">
+          <!--social icons div element followed by footer with copyright -->
+          <a href="https://www.instagram.com/danmoreels/">
+            <img
+              class="instagram"
+              src="images/instagram.svg"
+              alt="instagram icon"
+            />
+          </a>
+          <a href="https://github.com/architechnique">
+            <img class="github" src="images/github.svg" alt="github icon" />
+          </a>
+        </div>
+        <footer>&copy; Copyright 2021</footer>
+      </section>
+    </main>
+    <!--attach necessary js scripts-->
+    <script type="text/javascript" src="addlater.js"></script>
+    <script type="text/javascript" src="menubutton.js"></script>
+  </body>
+</html>

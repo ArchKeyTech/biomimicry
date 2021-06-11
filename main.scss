@@ -1,0 +1,247 @@
+@import "settings"; /* importing other scss files*/
+@import "homepage";
+@import "menu";
+@import "aboutme";
+@import "gallery";
+@import "saved";
+
+body {
+  /*styling the overall body of all pages*/
+  background-color: $primary-color;
+  color: white;
+  height: 100vh;
+  line-height: 1; /* line space*/
+}
+
+.word_highlight {
+  /* styling font-size and adding an orangered color to highlight words*/
+  font-size: 40px;
+
+  color: orangered;
+}
+
+h1 {
+  /*styling all h1 paragraphs fonts and margin for proper spacing*/
+  font-size: 70px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+h2 {
+  /*styling all h2 paragraphs fonts*/
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.header_home {
+  /*styling background color of header area*/
+  background-color: rgba($secondary-color, 0.6);
+}
+.menu-nav {
+  /*styling of menu navigation*/
+  list-style-type: none; /*removing bullet point from list items*/
+
+  li {
+    /*styling list menu items in menu area*/
+    font-size: 20px;
+    font-weight: bold;
+    display: inline-block;
+    @include transition-ease; /*using the mixin created to add a delay in color transition*/
+    &:hover {
+      /*adding orange filter to menu items when hovering*/
+      filter: $orange-filter;
+    }
+  }
+  a {
+    /*styling links within menu items (Home, About Me, Gallery)*/
+    padding-left: 5px;
+    color: white;
+    text-decoration: none;
+  }
+}
+
+.menu-nav1 {
+  /*styling of menu navigation*/
+  list-style-type: none; /*removing bullet point from list items*/
+
+  li {
+    /*styling list menu items in menu area*/
+    font-size: 20px;
+    font-weight: bold;
+    display: inline-block;
+    @include transition-ease; /*using the mixin created to add a delay in color transition*/
+    &:hover {
+      /*adding orange filter to menu items when hovering*/
+      filter: $orange-filter;
+    }
+  }
+  a {
+    /*styling links within menu items (Home, About Me, Gallery)*/
+    padding-left: 5px;
+    color: white;
+    text-decoration: none;
+  }
+}
+
+header {
+  /*styling of the header so that it stands above all content when sliding*/
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+  padding: 1rem;
+}
+
+main {
+  /*styling main area of page*/
+  height: 100%;
+  width: 100%;
+
+  .social-icons {
+    /*styling of social icons*/
+    position: fixed;
+    bottom: 0.2rem;
+    left: 1rem;
+
+    a {
+      /*styling links embedded within social icons*/
+      padding: 0.4rem;
+      @include transition-ease;
+      &:hover {
+        filter: $orange-filter;
+      }
+    }
+  }
+}
+
+footer {
+  font-size: 14px;
+  position: fixed;
+  bottom: 0.4rem; /* positions the content in footer to the bottom of the page*/
+  right: 0.5rem; /*moves footer content to right side(bottom)*/
+  color: white;
+  background-color: rgba($primary-color, 0.4);
+}
+
+.home-icon {
+  /*styling of menu icons at the top of page*/
+  margin-left: 30px;
+  width: 25px;
+  height: 25px;
+}
+
+h3 {
+  /*styling all h3 paragraphs*/
+  color: white;
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+
+#message {
+  /* styling of message box text in 'Ask Me' section*/
+  height: 100%;
+  padding: 40px 40px;
+}
+
+#firstname {
+  /*styling of first name in form in 'Ask Me' section*/
+  padding-left: 5rem;
+}
+
+#lastname {
+  /*styling last name in form in 'Ask Me' section*/
+  padding-left: 5rem;
+}
+
+label {
+  /*styling of labels from form in 'Ask Me' section*/
+  font-weight: bold;
+  color: white;
+}
+
+input {
+  /*adding margin space for form inputs*/
+  margin-bottom: 10px;
+}
+
+.filling_form {
+  /*styling of the form in 'About Me' section*/
+  display: inline-block; /*displaying the div section as inline-block to align it with a tight border*/
+  border-radius: 2em;
+  background-color: rgba($primary-color, 0.8);
+  padding: 20px 20px;
+  margin-bottom: 20px;
+  border: 3px solid rgba(orange, 0.5);
+}
+
+#submit-btn {
+  /*styling of submit button for form in 'About Me' section*/
+  cursor: pointer;
+  border-radius: 1em;
+  font-size: 20px;
+  padding: 10px 10px;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: rgba(orange, 0.5);
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+.add-icon-topics,
+.add-icon-topic-img,
+.add-icon-text,
+.add-icon-author-img,
+.add-icon-quote,
+.add-icon-details {
+  filter: $orange-filter;
+  width: 13px;
+  height: 13px;
+
+  @include transition-ease; /*using the mixin created to add a delay in color transition*/
+  &:hover {
+    /*adding orange filter to menu items when hovering*/
+    cursor: pointer;
+  }
+}
+
+.key_highlight {
+  /* styling font-size and adding an orangered color to highlight words*/
+
+  color: orange;
+}
+
+//all classes for each of the like/unlike icons
+.like-icon1,
+.like-icon2,
+.like-icon3,
+.like-icon4,
+.like-icon5,
+.like-icon6,
+.like-icon7,
+.like-icon8 {
+  width: 15px;
+  height: 15px;
+
+  &:hover {
+    /*adding heart icon filter to like/unlike icon when hovering*/
+    cursor: pointer;
+    filter: $heart-filter;
+  }
+}
+
+.key_highlight {
+  /* styling font-size and adding an orangered color to highlight words*/
+
+  color: orange;
+}

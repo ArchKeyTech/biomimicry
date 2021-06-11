@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gallery</title>
+    <link rel="stylesheet" href="scss/main.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!--adding main scss file -->
+  </head>
+  <body onload="initLoad()">
+    <!-- calling initLoad function from 'comment.js'-->
+    <header class="header_home">
+      <!-- creating a header for menu items -->
+      <div class="menu-button">
+        <!-- div element to store future menu button-->
+        <span class="menu-button__burger"></span
+        ><!--span element where is placed menu button -->
+      </div>
+      <nav class="nav">
+        <!--nav bar containing list of menu items -->
+        <ul class="menu-nav">
+          <li class="menu-nav__item">
+            <a href="index.html" class="menu-nav__link"
+              ><img class="home-icon" src="images/home0.svg"
+            /></a>
+            <!--icons for menu item -->
+            <a href="index.html" class="menu-nav__link"> Home </a>
+            <!--each menu item has a link to its corresponding page -->
+          </li>
+          <li class="menu-nav__item">
+            <a href="aboutme.html" class="menu-nav__link"
+              ><img class="home-icon" src="images/profile.svg"
+            /></a>
+            <a href="aboutme.html" class="menu-nav__link"> About Me </a>
+          </li>
+          <li class="menu-nav__item active">
+            <a href="gallery.html" class="menu-nav__link"
+              ><img class="home-icon" src="images/media.svg"
+            /></a>
+            <a href="gallery.html" class="menu-nav__link"> Gallery </a>
+          </li>
+          <li class="menu-nav__item">
+            <a href="saved.html" class="menu-nav__link"
+              ><img class="home-icon" src="images/folder1.svg"
+            /></a>
+            <a href="saved.html" class="menu-nav__link"> Storage </a>
+          </li>
+        </ul>
+      </nav>
+      <nav class="nav1">
+        <!--clone of nav bar containing list of menu items (used for the menu button) -->
+        <ul class="menu-nav1">
+          <li class="menu-nav1__item">
+            <a href="index.html" class="menu-nav1__link"
+              ><img class="home-icon" src="images/home0.svg"
+            /></a>
+            <!--icons for menu item -->
+            <a href="index.html" class="menu-nav__link"> Home </a>
+            <!--each menu item has a link to its corresponding page -->
+          </li>
+          <li class="menu-nav1__item">
+            <a href="aboutme.html" class="menu-nav__link"
+              ><img class="home-icon" src="images/profile.svg"
+            /></a>
+            <a href="aboutme.html" class="menu-nav__link"> About Me </a>
+          </li>
+          <li class="menu-nav1__item active">
+            <a href="gallery.html" class="menu-nav__link"
+              ><img class="home-icon" src="images/media.svg"
+            /></a>
+            <a href="gallery.html" class="menu-nav__link"> Gallery </a>
+          </li>
+          <li class="menu-nav1__item">
+            <a href="saved.html" class="menu-nav__link"
+              ><img class="home-icon" src="images/folder1.svg"
+            /></a>
+            <a href="saved.html" class="menu-nav__link"> Storage </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="gallery">
+        <!--creating 'Gallery' section -->
+        <h2 class="gallery__heading">Gallery</h2>
+        <!--'Gallery' heading -->
+        <table class="gallery__table">
+          <!--table element to store content in tabular format -->
+          <tr>
+            <th>Sector</th>
+            <!--"Sector" heading for table (Robotics, Medical,Agriculture etc) -->
+            <th>Image</th>
+            <!--"Image" heading for table -->
+          </tr>
+          <tr>
+            <td>
+              <!-- div to store like/unlike icon tooltip (this is repeated for each like/unlike icon)-->
+              <div
+                class="tooltip"
+                style="
+                  display: inline-block;
+                  position: relative;
+                  left: -20px;
+                  top: 2px;
+                "
+              >
+                <img class="like-icon4" src="images/unheart.svg" />
+                <span class="tooltiptext">Like/Unlike</span>
+              </div>
+
+              <!-- div to store add icon tooltip for articles/topic (this is repeated for each add-icon)-->
+              <div
+                class="tooltip"
+                style="display: inline-block; position: relative"
+              >
+                <img class="add-icon-topics" src="images/add.svg" />
+                <span class="tooltiptext">Save article for later</span>
+              </div>
+              <b>Robotics</b>
+              <p
+                href="https://asknature.org/innovation/self-repairing-robots-inspired-by-plants/"
+                id="robotics"
+                class="innovations"
+              >
+                <!--paragraph to store detail of innovations -->
+                <br />Bilkent University use plant attributes <br />
+                to create self-repairing robots...
+              </p>
+              <a
+                href="https://asknature.org/innovation/self-repairing-robots-inspired-by-plants/"
+                class="external_link"
+              >
+                Learn more</a
+              ><!--a link to the source of the information -->
+            </td>
+            <td>
+              <!-- div to store add icon tooltip for images of articles/topic (this is repeated for each add-icon)-->
+              <div
+                class="tooltip"
+                style="display: inline-block; position: relative; bottom: 280px"
+              >
+                <img class="add-icon-topic-img" src="images/add.svg" />
+                <span class="tooltiptext">Save image for later</span>
+              </div>
+              <a
+                href="https://asknature.org/innovation/self-repairing-robots-inspired-by-plants/"
+                class="external_link"
+              >
+                <img
+                  id="robotics-img"
+                  src="https://asknature.org/wp-content/uploads/2021/01/sergey-shmidt-koy6FlCCy5s-unsplash-720x480.jpg"
+                  class="gallery__table--img"
+              /></a>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div
+                class="tooltip"
+                style="
+                  display: inline-block;
+                  position: relative;
+                  left: -20px;
+                  top: 2px;
+                "
+              >
+                <img class="like-icon5" src="images/unheart.svg" />
+                <span class="tooltiptext">Like/Unlike</span>
+              </div>
+              <div
+                class="tooltip"
+                style="display: inline-block; position: relative"
+              >
+                <img class="add-icon-topics" src="images/add.svg" />
+                <span class="tooltiptext">Save article for later</span>
+              </div>
+              <b>Medical</b>
+              <p
+                href="https://asknature.org/innovation/antibacterial-biomaterial-inspired-by-spider-silk/"
+                id="medical"
+                class="innovations"
+              >
+                <br />The University of Bayreuth has developed an<br />
+                antibacterial coating based on spider silk...
+              </p>
+              <a
+                href="https://asknature.org/innovation/antibacterial-biomaterial-inspired-by-spider-silk/"
+                class="external_link"
+              >
+                Learn more</a
+              >
+            </td>
+            <td>
+              <div
+                class="tooltip"
+                style="display: inline-block; position: relative; bottom: 280px"
+              >
+                <img class="add-icon-topic-img" src="images/add.svg" />
+                <span class="tooltiptext">Save image for later</span>
+              </div>
+              <a
+                href="https://asknature.org/innovation/antibacterial-biomaterial-inspired-by-spider-silk/"
+                class="external_link"
+              >
+                <img
+                  id="medical-img"
+                  src="https://asknature.org/wp-content/uploads/2020/12/nick-fewings-Z2yXfJEu5rI-unsplash-720x480.jpg"
+                  class="gallery__table--img"
+              /></a>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div
+                class="tooltip"
+                style="
+                  display: inline-block;
+                  position: relative;
+                  left: -20px;
+                  top: 2px;
+                "
+              >
+                <img class="like-icon6" src="images/unheart.svg" />
+                <span class="tooltiptext">Like/Unlike</span>
+              </div>
+              <div
+                class="tooltip"
+                style="display: inline-block; position: relative"
+              >
+                <img class="add-icon-topics" src="images/add.svg" />
+                <span class="tooltiptext">Save article for later</span>
+              </div>
+              <b>Food &amp; Agriculture</b>
+              <p
+                href="https://asknature.org/innovation/passive-cooling-system-inspired-by-camels/"
+                id="agriculture"
+                class="innovations"
+              >
+                <br />MIT has developed a cooling system with<br />
+                reduced power usage based on camels...
+              </p>
+              <a
+                href="https://asknature.org/innovation/passive-cooling-system-inspired-by-camels/"
+                class="external_link"
+              >
+                Learn more</a
+              >
+            </td>
+            <td>
+              <div
+                class="tooltip"
+                style="display: inline-block; position: relative; bottom: 280px"
+              >
+                <img class="add-icon-topic-img" src="images/add.svg" />
+                <span class="tooltiptext">Save image for later</span>
+              </div>
+              <a
+                href="https://asknature.org/innovation/passive-cooling-system-inspired-by-camels/"
+                class="external_link"
+              >
+                <img
+                  id="agriculture-img"
+                  src="https://asknature.org/wp-content/uploads/2021/01/wolfgang-hasselmann-YAIGmqV4dFc-unsplash-720x480.jpg"
+                  class="gallery__table--img"
+              /></a>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div
+                class="tooltip"
+                style="
+                  display: inline-block;
+                  position: relative;
+                  left: -20px;
+                  top: 2px;
+                "
+              >
+                <img class="like-icon7" src="images/unheart.svg" />
+                <span class="tooltiptext">Like/Unlike</span>
+              </div>
+              <div
+                class="tooltip"
+                style="display: inline-block; position: relative"
+              >
+                <img class="add-icon-topics" src="images/add.svg" />
+                <span class="tooltiptext">Save article for later</span>
+              </div>
+              <b>Renewable Energy</b>
+              <p
+                href="https://asknature.org/innovation/antireflective-solar-panels-inspired-by-butterfly-wings/"
+                id="ren_energy"
+                class="innovations"
+              >
+                <br />Anhui Polytechnic University have patterned an anti-<br />
+                reflective solar panel inspired by butterfly wings...
+              </p>
+              <a
+                href="https://asknature.org/innovation/antireflective-solar-panels-inspired-by-butterfly-wings/"
+                class="external_link"
+              >
+                Learn more</a
+              >
+            </td>
+            <td>
+              <div
+                class="tooltip"
+                style="display: inline-block; position: relative; bottom: 280px"
+              >
+                <img class="add-icon-topic-img" src="images/add.svg" />
+                <span class="tooltiptext">Save image for later</span>
+              </div>
+              <a
+                href="https://asknature.org/innovation/antireflective-solar-panels-inspired-by-butterfly-wings/"
+                class="external_link"
+              >
+                <img
+                  id="ren_energy-img"
+                  src="https://asknature.org/wp-content/uploads/2021/01/boris-smokrovic-BtoUjLUtPnQ-unsplash-720x480.jpg"
+                  class="gallery__table--img"
+              /></a>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div
+                class="tooltip"
+                style="
+                  display: inline-block;
+                  position: relative;
+                  left: -20px;
+                  top: 2px;
+                "
+              >
+                <img class="like-icon8" src="images/unheart.svg" />
+                <span class="tooltiptext">Like/Unlike</span>
+              </div>
+              <div
+                class="tooltip"
+                style="display: inline-block; position: relative"
+              >
+                <img class="add-icon-topics" src="images/add.svg" />
+                <span class="tooltiptext">Save article for later</span>
+              </div>
+              <b>Manufacturing</b>
+              <p
+                href="https://asknature.org/innovation/colorful-fibers-inspired-by-proteins-found-in-discosoma-coral/"
+                id="manufacturing"
+                class="innovations"
+              >
+                <br />The team at Werewool are creating colorful textiles<br />
+                based on proteins found in discosoma corals...
+              </p>
+              <a
+                href="https://asknature.org/innovation/colorful-fibers-inspired-by-proteins-found-in-discosoma-coral/"
+                class="external_link"
+              >
+                Learn more</a
+              >
+            </td>
+            <td>
+              <div
+                class="tooltip"
+                style="display: inline-block; position: relative; bottom: 280px"
+              >
+                <img class="add-icon-topic-img" src="images/add.svg" />
+                <span class="tooltiptext">Save image for later</span>
+              </div>
+              <a
+                href="https://asknature.org/innovation/colorful-fibers-inspired-by-proteins-found-in-discosoma-coral/"
+                class="external_link"
+              >
+                <img
+                  id="manufacturing-img"
+                  src="https://asknature.org/wp-content/uploads/2021/02/IYORBank_CloseUp_RamonaOsche_43-720x480.jpg"
+                  class="gallery__table--img"
+              /></a>
+            </td>
+          </tr>
+        </table>
+        <div class="notice">
+          <!--div block to store ownership message -->
+          The images and articles above are obtained from Asknature.org
+        </div>
+      </section>
+      <section class="Comments">
+        <div class="Comments__container">
+          <h2 style="color: black">Leave a comment</h2>
+          <form>
+            <input type="text" id="name" name="name" placeholder="Name" />
+
+            <textarea placeholder="Add Your Comment"></textarea>
+            <div class="cmt-btns">
+              <button onclick="addComment()" id="comment">Comment</button>
+              <button type="button" id="cancel">Cancel</button>
+            </div>
+          </form>
+          <div style="margin-top: 40px">
+            <form>
+              <ul class="usr_comments"></ul>
+            </form>
+          </div>
+        </div>
+        <div class="social-icons">
+          <!--social icons div element followed by footer with copyright -->
+          <a href="https://www.instagram.com/danmoreels/">
+            <img
+              class="instagram"
+              src="images/instagram.svg"
+              alt="instagram icon"
+            />
+          </a>
+          <a href="https://github.com/architechnique">
+            <img class="github" src="images/github.svg" alt="github icon" />
+          </a>
+        </div>
+        <footer>&copy; Copyright 2021</footer>
+      </section>
+    </main>
+
+    <!-- attach the necessary js scripts-->
+    <script type="text/javascript" src="addlater.js"></script>
+    <script type="text/javascript" src="comment.js"></script>
+    <script type="text/javascript" src="menubutton.js"></script>
+    <script type="text/javascript" src="liked.js"></script>
+  </body>
+</html>

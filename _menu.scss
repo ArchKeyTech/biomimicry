@@ -1,0 +1,116 @@
+/* this scss file is used to style the menu button
+*/
+
+.menu-button {
+  //styling of menu button position and children classes
+  cursor: pointer;
+  position: absolute;
+  z-index: 1;
+  right: 1rem;
+  top: 1rem;
+  height: 20px;
+  width: 30px;
+  @include transition-ease;
+  &:hover {
+    filter: $orange-filter;
+  }
+
+  &__burger {
+    /*middle bar of the burger button*/
+    position: absolute;
+    @include transition-ease;
+    top: 0.5rem;
+    right: 0;
+    width: 30px;
+    height: 3px;
+    background-color: white;
+
+    &::before {
+      /*creating the small top bar (before middle bar) of the menu icon */
+      content: "";
+      position: absolute;
+      @include transition-ease;
+      top: -8px; /* moves this section of the menu 8px above middle*/
+      width: 30px;
+      height: 3px;
+      background-color: white;
+    }
+
+    &::after {
+      //creating the small bottom bar (after middle bar) of the menu icon
+      content: "";
+      position: absolute;
+      @include transition-ease;
+      top: 8px; /* moves this section of the menu 8px above middle*/
+      width: 20px;
+      height: 3px;
+      background-color: white;
+    }
+
+    &.open {
+      // creating a class to control the animation of the menu button
+      transform: rotate(
+        720deg
+      ); //rotate the icon by 360degrees twice when clicked
+      background: transparent; // make background transparent
+
+      &::before {
+        transform: rotate(45deg) translate(5px, 8px); // rotate and translate the top bar of menu button to form a 'X'
+      }
+      &::after {
+        width: 30px; // set the width of the bottom bar to be same as top bar
+        transform: rotate(-45deg) translate(3px, -7px); // rotate and translate the bottom bar of menu button to form a 'X'
+      }
+    }
+  }
+}
+
+.nav1 {
+  // style the cloned nav class for the menu-button items
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  opacity: 0.8; // make it slightly transparent
+  visibility: hidden; // hide it initially
+
+  &.open {
+    // another open to make it visible when called
+    visibility: visible;
+  }
+
+  .menu-nav1 {
+    // the menu nav which holds the menu list items
+    display: flex; // display as flex
+    flex-flow: column wrap; //display flex items in column
+    align-items: center; // center the menu items
+    justify-content: center; //justify content to center
+    height: 100vh; //make height be full view height
+    overflow: hidden; //hide overflow to eliminate scroll bar
+    background: silver;
+    list-style-type: none;
+    padding-right: 1rem;
+    transform: translateY(
+      -100%
+    ); // translate the menu-nav so that it starts from top to bottom
+    @include transition-ease;
+
+    &.open {
+      transform: translateY(0); // make menu-nav return to its initial position
+    }
+
+    &__item {
+      &.active > a {
+        // make the menu items hamburger with the 'active' keyword highlight when on the page displayed
+        color: black; //black highlight color
+      }
+    }
+  }
+}
+
+.menu-nav__item {
+  // make the menu items with the 'active' keyword highlight when on the page displayed
+  &.active > a {
+    color: black;
+  }
+}

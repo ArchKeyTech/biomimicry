@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Me</title>
+    <link rel="stylesheet" href="scss/main.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!--adding main scss file -->
+  </head>
+  <body>
+    <header class="header_home">
+      <!-- creating a header for menu items -->
+      <div class="menu-button">
+        <!-- div element to store future menu button-->
+        <span class="menu-button__burger"></span>
+        <!--span element where is placed menu button -->
+      </div>
+      <nav class="nav">
+        <!--nav bar containing list of menu items -->
+        <ul class="menu-nav">
+          <li class="menu-nav__item">
+            <a href="index.html" class="menu-nav__link"
+              ><img class="home-icon" src="images/home0.svg"
+            /></a>
+            <!--icons for menu item -->
+            <a href="index.html" class="menu-nav__link"> Home </a>
+            <!--each menu item has a link to its corresponding page -->
+          </li>
+          <li class="menu-nav__item active">
+            <a href="aboutme.html" class="menu-nav__link"
+              ><img class="home-icon" src="images/profile.svg"
+            /></a>
+            <a href="aboutme.html" class="menu-nav__link"> About Me </a>
+          </li>
+          <li class="menu-nav__item">
+            <a href="gallery.html" class="menu-nav__link"
+              ><img class="home-icon" src="images/media.svg"
+            /></a>
+            <a href="gallery.html" class="menu-nav__link"> Gallery </a>
+          </li>
+          <li class="menu-nav__item">
+            <a href="saved.html" class="menu-nav__link"
+              ><img class="home-icon" src="images/folder1.svg"
+            /></a>
+            <a href="saved.html" class="menu-nav__link"> Storage </a>
+          </li>
+        </ul>
+      </nav>
+      <nav class="nav1">
+        <!--clone of nav bar containing list of menu items (used for the menu button) -->
+        <ul class="menu-nav1">
+          <li class="menu-nav1__item">
+            <a href="index.html" class="menu-nav__link"
+              ><img class="home-icon" src="images/home0.svg"
+            /></a>
+            <!--icons for menu item -->
+            <a href="index.html" class="menu-nav__link"> Home </a>
+            <!--each menu item has a link to its corresponding page -->
+          </li>
+          <li class="menu-nav1__item active">
+            <a href="aboutme.html" class="menu-nav__link"
+              ><img class="home-icon" src="images/profile.svg"
+            /></a>
+            <a href="aboutme.html" class="menu-nav__link"> About Me </a>
+          </li>
+          <li class="menu-nav1__item">
+            <a href="gallery.html" class="menu-nav__link"
+              ><img class="home-icon" src="images/media.svg"
+            /></a>
+            <a href="gallery.html" class="menu-nav__link"> Gallery </a>
+          </li>
+          <li class="menu-nav1__item">
+            <a href="saved.html" class="menu-nav__link"
+              ><img class="home-icon" src="images/folder1.svg"
+            /></a>
+            <a href="saved.html" class="menu-nav__link"> Storage </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="aboutme">
+        <!--section to store 'About me' contents -->
+        <h2 class="aboutme__intro">
+          <!--heading to store text -->
+          <span class="word_highlight">Who</span> am I?
+          <!--span used multiple time through the page to highlight a word -->
+        </h2>
+        <p class="home__whatis--description">
+          <!--paragraph for 'About Me' section of the page -->
+          I'm Dan-Samuel, people call me Dan. I have a huge admiration for
+          nature's creative process.<br /><br />
+          This, combined with my passion for technology and electronics, has
+          made me want to learn more about the concept of Biomimicry.
+          <br /><br />I love to read about scientific-phenomena, psychology and
+          history. Beside that I am an avid chess, hip-hop and anime fanatic
+        </p>
+      </section>
+      <section class="contactme">
+        <!--section to store 'Contact me contents' -->
+        <h2 class="contactme__heading">
+          <span class="word_highlight">Contact</span> me
+        </h2>
+        <div class="contactme__list">
+          <!-- div to store add icon tooltip for articles/topic (this is repeated for each add-icon)-->
+          <div
+            class="tooltip"
+            style="display: inline-block; position: relative; top: 10px"
+          >
+            <img class="add-icon-details" src="images/add.svg" />
+            <span class="tooltiptext">Save details for later</span>
+          </div>
+          <!--div element to store contact content -->
+          <div class="contactme__list--detail">
+            <!--div block with contact email and number -->
+            <img class="contactme__list--icons" src="images/messages.svg" />
+            <!--icon for email -->
+            Email
+            <a href="mailto:dan.moleka@gmail.com" class="contactme__list--link"
+              >dan.moleka@gmail.com</a
+            ><!--email link -->
+          </div>
+          <div
+            class="tooltip"
+            style="display: inline-block; position: relative; top: 15px"
+          >
+            <img class="add-icon-details" src="images/add.svg" />
+            <span class="tooltiptext">Save details for later</span>
+          </div>
+          <div class="contactme__list--detail">
+            <img class="contactme__list--icons" src="images/phone.svg" /> Phone
+            <!--icon for phone -->
+            <span class="contactme__list--icon_text">(+27)613375788</span>
+          </div>
+        </div>
+        <section class="askme">
+          <!--section to store "Ask Me" contents -->
+          <h2 class="contactme__heading">
+            <span class="word_highlight">Share</span> with me
+          </h2>
+          <div class="askme__subheading">
+            <!--div block to store paragraph before form-->
+            <p class="askme__subheading--facts">
+              if you know of interesting ways in which Biomimicry
+            </p>
+            <p class="askme__subheading--facts">
+              is applied, share it with me! Or if this website has
+            </p>
+            <p class="askme__subheading--facts">
+              been somehow educational, let me know :)
+            </p>
+          </div>
+          <section>
+            <!--section to store filling form -->
+            <div class="filling_form">
+              <form action>
+                <!--filling form to store user name, surname and message. -->
+                <label for="firstname">First name:</label><br />
+                <input
+                  type="text"
+                  id="firstname"
+                  name="firstname"
+                  placeholder="Enter First Name"
+                /><br />
+                <label for="lastname">Last name:</label><br />
+                <input
+                  type="text"
+                  id="lastname"
+                  name="lastname"
+                  placeholder="Enter Last Name"
+                /><br />
+                <label for="message">Message:</label><br />
+                <input
+                  type="text"
+                  id="message"
+                  name="message"
+                  placeholder="Type your message"
+                /><br /><br />
+                <h3>would you like to subscribe to my newsletter?</h3>
+                <!--offer newsletter subscription with radio button -->
+                <input
+                  type="radio"
+                  id="subscribe"
+                  name="newsletter"
+                  value="Yes"
+                />
+                <label>Yes, please use e-mail provided</label><br />
+                <input
+                  type="radio"
+                  id="notsubscribe"
+                  name="newsletter"
+                  value="No"
+                />
+                <label>No, do not use e-mail</label><br />
+
+                <br /><br />
+                <input id="submit-btn" type="submit" value="Submit" />
+                <!--include submit button to send email -->
+              </form>
+            </div>
+          </section>
+        </section>
+        <div class="social-icons">
+          <!--same social icons and footer with copyright at bottom -->
+          <a href="https://www.instagram.com/danmoreels/">
+            <img
+              class="instagram"
+              src="images/instagram.svg"
+              alt="instagram icon"
+            />
+          </a>
+          <a href="https://github.com/architechnique">
+            <img class="github" src="images/github.svg" alt="github icon" />
+          </a>
+        </div>
+        <footer>&copy; Copyright 2021</footer>
+      </section>
+    </main>
+    <!-- attach the necessary js scripts-->
+    <script type="text/javascript" src="addlater.js"></script>
+    <script type="text/javascript" src="menubutton.js"></script>
+  </body>
+</html>

@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dan's Page</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <link rel="stylesheet" href="scss/main.css" />
+    <!--adding main scss file -->
+  </head>
+  <body>
+    <header class="header_home">
+      <!-- creating a header for menu items -->
+      <div class="menu-button">
+        <!-- div element to store future menu button-->
+        <span class="menu-button__burger"></span>
+        <!--span element where is placed menu button -->
+      </div>
+      <nav class="nav">
+        <!--nav bar containing list of menu items -->
+        <ul class="menu-nav">
+          <li class="menu-nav__item active">
+            <a href="index.html" class="menu-nav__link"
+              ><img class="home-icon" src="images/home0.svg"
+            /></a>
+            <!--icons for menu item -->
+            <a href="index.html" class="menu-nav__link"> Home </a>
+            <!--each menu item has a link to its corresponding page -->
+          </li>
+          <li class="menu-nav__item">
+            <a href="aboutme.html" class="menu-nav__link"
+              ><img class="home-icon" src="images/profile.svg"
+            /></a>
+            <a href="aboutme.html" class="menu-nav__link"> About Me </a>
+          </li>
+          <li class="menu-nav__item">
+            <a href="gallery.html" class="menu-nav__link"
+              ><img class="home-icon" src="images/media.svg"
+            /></a>
+            <a href="gallery.html" class="menu-nav__link"> Gallery </a>
+          </li>
+          <li class="menu-nav__item">
+            <a href="saved.html" class="menu-nav__link"
+              ><img class="home-icon" src="images/folder1.svg"
+            /></a>
+            <a href="saved.html" class="menu-nav__link"> Storage </a>
+          </li>
+        </ul>
+      </nav>
+      <nav class="nav1">
+        <!--clone of nav bar containing list of menu items (used for the menu button) -->
+        <ul class="menu-nav1">
+          <li class="menu-nav1__item active">
+            <a href="index.html" class="menu-nav__link"
+              ><img class="home-icon" src="images/home0.svg"
+            /></a>
+            <!--icons for menu item -->
+            <a href="index.html" class="menu-nav__link"> Home </a>
+            <!--each menu item has a link to its corresponding page -->
+          </li>
+          <li class="menu-nav1__item">
+            <a href="aboutme.html" class="menu-nav__link"
+              ><img class="home-icon" src="images/profile.svg"
+            /></a>
+            <a href="aboutme.html" class="menu-nav__link"> About Me </a>
+          </li>
+          <li class="menu-nav1__item">
+            <a href="gallery.html" class="menu-nav__link"
+              ><img class="home-icon" src="images/media.svg"
+            /></a>
+            <a href="gallery.html" class="menu-nav__link"> Gallery </a>
+          </li>
+          <li class="menu-nav1__item">
+            <a href="saved.html" class="menu-nav__link"
+              ><img class="home-icon" src="images/folder1.svg"
+            /></a>
+            <a href="saved.html" class="menu-nav__link"> Storage </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="home">
+        <!--section created for content under nav bar -->
+        <h1 class="home__intro">Welcome!</h1>
+        <!--welcome heading -->
+        <h2>
+          Discover the wonders of <span class="word_highlight">Biomimicry</span>
+        </h2>
+        <!--second heading under 'Welcome' -->
+      </section>
+      <section class="home__whatis">
+        <!--section to store information on topic -->
+        <div style="display: inline-block">
+          <h2 class="home__whatis--headings">
+            <span class="word_highlight">What</span> is Biomimicry ?
+            <!--span element is used multiple time to highlight a specific word -->
+          </h2>
+        </div>
+
+        <!-- div to store like/unlike icon tooltip (this is repeated for each like/unlike icon)-->
+        <div
+          class="tooltip"
+          style="display: inline-block; position: relative; left: 50px"
+        >
+          <img class="like-icon1" src="images/unheart.svg" />
+          <span class="tooltiptext">Like/Unlike</span>
+        </div>
+
+        <!-- div to store add icon tooltip for texts (this is repeated for each add-icon)-->
+        <div
+          class="tooltip"
+          style="display: inline-block; position: relative; left: 70px"
+        >
+          <img class="add-icon-text" src="images/add.svg" />
+          <span class="tooltiptext">Save text for later</span>
+        </div>
+
+        <div>
+          <p class="home__whatis--description">
+            <!--paragraphs of information -->
+            Biomimicry is a creative and intelligent process that emulates
+            strategies found in nature to offer sustainable solutions for design
+            challenges faced by humans.<br /><br />
+            The key word is sustainability. Unlike other bio-inspired designs,
+            biomimicry places a larger emphasis on solutions mimicking nature in
+            terms of its functionality. <br /><br />
+            By closely studying and learning from our ecosystem we have been
+            able to create regenerative designs that fully emulate distinct
+            properties found throughout nature in a manner that's aligned with
+            the ethos of biomimicry.
+          </p>
+        </div>
+
+        <div style="display: inline-block">
+          <h2 class="home__whatis--headings">
+            <span class="word_highlight">How</span> is Biomimicry applied ?
+          </h2>
+        </div>
+        <div
+          class="tooltip"
+          style="display: inline-block; position: relative; left: 10px"
+        >
+          <img class="like-icon2" src="images/unheart.svg" />
+          <span class="tooltiptext">Like/Unlike</span>
+        </div>
+        <div
+          class="tooltip"
+          style="display: inline-block; position: relative; left: 30px"
+        >
+          <img class="add-icon-text" src="images/add.svg" />
+          <span class="tooltiptext">Save text for later</span>
+        </div>
+
+        <div>
+          <p class="home__whatis--description">
+            Researchers and innovators carefully apply biomimicry principles to
+            solve problems across various disciplines such as medicine,
+            robotics, architecture, agriculture etc.<br /><br />
+            There are 3 fundamental ideas to biomimicry:
+            <br /><br />
+            Emulation:
+            <br /><br />
+            Using scientific methods combined with an understanding of the
+            ecosystem to mimic nature's approach in problem solving.
+            <br /><br />
+            Ethos:
+            <br /><br />
+            Ensuring that the philosophy behind the aspects of all designs are
+            supportive and contribute to enriching conditions of life and not
+            deteriorate it.
+            <br /><br />
+            (Re)Connect:
+            <br /><br />
+            Rebuilding a bond with a nature to better understand it and align
+            our design principles around it.<br /><br />
+            Biomimicry allows us to address challenges as efficiently and
+            sustainably as nature does.
+            <a href="gallery.html" class="internal_link">
+              <!-- using a sentence as a link to another page of the website -->
+              Explore biomimicry further by checking out the Gallery.
+            </a>
+          </p>
+        </div>
+
+        <div style="display: inline-block" class="quote">
+          <!--div element to store quotation -->
+          <ul>
+            <li>
+              <div class="quote__text">
+                <img src="images/janine.jpg" class="quote__text--img" />
+                <div
+                  class="tooltip"
+                  style="
+                    display: inline-block;
+                    position: relative;
+                    bottom: 60px;
+                  "
+                >
+                  <img class="add-icon-author-img" src="images/add.svg" />
+                  <span class="tooltiptext">Save image for later</span>
+                </div>
+
+                <!--image of quote author -->
+                <blockquote>
+                  <!--blocknote element to store quote-->
+                  What if, every time I started to invent something, I asked,<br />
+                  'How would nature solve this?'
+                </blockquote>
+                <cite>- Janine Benyus </cite
+                ><!--cite element for quote author -->
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div
+          class="tooltip"
+          style="display: inline-block; position: relative; bottom: -10px"
+        >
+          <img class="like-icon3" src="images/unheart.svg" />
+          <span class="tooltiptext">Like/Unlike</span>
+        </div>
+        <div
+          class="tooltip"
+          style="
+            display: inline-block;
+            position: relative;
+            bottom: -10px;
+            left: 20px;
+          "
+        >
+          <img class="add-icon-quote" src="images/add.svg" />
+          <span class="tooltiptext">Save quote for later</span>
+        </div>
+
+        <div class="social-icons">
+          <!-- div element for social media icons  -->
+          <a href="https://www.instagram.com/danmoreels/">
+            <!--adding a link for social media icons -->
+            <img
+              class="instagram"
+              src="images/instagram.svg"
+              alt="instagram icon"
+            />
+          </a>
+          <a href="https://github.com/architechnique">
+            <img class="github" src="images/github.svg" alt="github icon" />
+          </a>
+        </div>
+        <footer>&copy; Copyright 2021</footer>
+        <!--footer element at bottom to hold 'copyright' -->
+      </section>
+    </main>
+    <!--attach necessary js scripts-->
+    <script type="text/javascript" src="addlater.js"></script>
+    <script type="text/javascript" src="menubutton.js"></script>
+    <script type="text/javascript" src="liked.js"></script>
+  </body>
+</html>

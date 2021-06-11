@@ -1,0 +1,752 @@
+/*a file with settings/configurations used to style
+which are reused within the main.scss file*/
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* importing other scss files*/
+/*a file with settings/configurations used to style
+which are reused within the main.scss file*/
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.home {
+  height: 90%;
+  padding-top: 40vh;
+  /*overflow:hidden eliminates scrollbar on homepage, make all content visible*/
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  border-bottom: 2px solid white;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(128, 128, 128, 0.4)), to(rgba(255, 165, 0, 0.6))), url("../images/butterfly.jpg") center top;
+  background: linear-gradient(to right, rgba(128, 128, 128, 0.4), rgba(255, 165, 0, 0.6)), url("../images/butterfly.jpg") center top;
+  background-size: cover;
+}
+
+.home__whatis {
+  height: auto;
+  padding-top: 10vh;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(128, 128, 128, 0.3)), to(rgba(128, 128, 128, 0.9))), url("../images/plants.jpg") center top;
+  background: linear-gradient(to right, rgba(128, 128, 128, 0.3), rgba(128, 128, 128, 0.9)), url("../images/plants.jpg") center top;
+}
+
+.home__whatis--description {
+  border: 3px solid rgba(255, 165, 0, 0.5);
+  color: white;
+  background-color: rgba(128, 128, 128, 0.7);
+  font-size: 16px;
+  margin-top: 10px;
+  margin-left: 200px;
+  margin-right: 200px;
+  border-radius: 2em;
+  padding: 10px 10px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: left;
+}
+
+.home__whatis--headings {
+  margin-top: 10px;
+  color: white;
+}
+
+.quote {
+  margin-top: 30px;
+}
+
+.quote__text {
+  padding: 10px;
+  display: inline-block;
+  background-color: rgba(128, 128, 128, 0.7);
+  border: 2px solid orange;
+  border-radius: 1em;
+  margin-bottom: 20px;
+}
+
+.quote__text--img {
+  width: 5em;
+  height: 5em;
+  border-radius: 50%;
+  border: 2px solid orange;
+}
+
+.internal_link {
+  text-decoration: none;
+  color: orange;
+}
+
+.internal_link:hover {
+  text-decoration: underline;
+}
+
+/* this scss file is used to style the menu button
+*/
+.menu-button {
+  cursor: pointer;
+  position: absolute;
+  z-index: 1;
+  right: 1rem;
+  top: 1rem;
+  height: 20px;
+  width: 30px;
+  /* a mixin that will be used to control transition action of colors etc*/
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.menu-button:hover {
+  -webkit-filter: invert(69%) sepia(22%) saturate(7213%) hue-rotate(2deg) brightness(108%) contrast(102%);
+          filter: invert(69%) sepia(22%) saturate(7213%) hue-rotate(2deg) brightness(108%) contrast(102%);
+}
+
+.menu-button__burger {
+  /*middle bar of the burger button*/
+  position: absolute;
+  /* a mixin that will be used to control transition action of colors etc*/
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  top: 0.5rem;
+  right: 0;
+  width: 30px;
+  height: 3px;
+  background-color: white;
+}
+
+.menu-button__burger::before {
+  /*creating the small top bar (before middle bar) of the menu icon */
+  content: "";
+  position: absolute;
+  /* a mixin that will be used to control transition action of colors etc*/
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  top: -8px;
+  /* moves this section of the menu 8px above middle*/
+  width: 30px;
+  height: 3px;
+  background-color: white;
+}
+
+.menu-button__burger::after {
+  content: "";
+  position: absolute;
+  /* a mixin that will be used to control transition action of colors etc*/
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  top: 8px;
+  /* moves this section of the menu 8px above middle*/
+  width: 20px;
+  height: 3px;
+  background-color: white;
+}
+
+.menu-button__burger.open {
+  -webkit-transform: rotate(720deg);
+          transform: rotate(720deg);
+  background: transparent;
+}
+
+.menu-button__burger.open::before {
+  -webkit-transform: rotate(45deg) translate(5px, 8px);
+          transform: rotate(45deg) translate(5px, 8px);
+}
+
+.menu-button__burger.open::after {
+  width: 30px;
+  -webkit-transform: rotate(-45deg) translate(3px, -7px);
+          transform: rotate(-45deg) translate(3px, -7px);
+}
+
+.nav1 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  opacity: 0.8;
+  visibility: hidden;
+}
+
+.nav1.open {
+  visibility: visible;
+}
+
+.nav1 .menu-nav1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  background: silver;
+  list-style-type: none;
+  padding-right: 1rem;
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+  /* a mixin that will be used to control transition action of colors etc*/
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.nav1 .menu-nav1.open {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+.nav1 .menu-nav1__item.active > a {
+  color: black;
+}
+
+.menu-nav__item.active > a {
+  color: black;
+}
+
+.aboutme {
+  height: 80%;
+  padding-top: 15vh;
+  /*overflow:hidden eliminates scrollbar on homepage, make all content visible*/
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  border-bottom: 2px solid white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(128, 128, 128, 0)), to(rgba(255, 165, 0, 0.8))), url("../images/blue.jpg") center top;
+  background: linear-gradient(to right, rgba(128, 128, 128, 0), rgba(255, 165, 0, 0.8)), url("../images/blue.jpg") center top;
+  background-size: cover;
+}
+
+.aboutme__intro {
+  font-size: 2rem;
+}
+
+.contactme {
+  height: 70%;
+  padding-top: 10vh;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(128, 128, 128, 0.6)), to(rgba(255, 165, 0, 0))), url("../images/forrest.jpg") center top;
+  background: linear-gradient(to right, rgba(128, 128, 128, 0.6), rgba(255, 165, 0, 0)), url("../images/forrest.jpg") center top;
+  background-size: cover;
+}
+
+.contactme__heading {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.contactme__list {
+  display: inline-block;
+  background-color: rgba(128, 128, 128, 0.6);
+  border-radius: 2em;
+  border: 3px solid rgba(255, 165, 0, 0.5);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 30px 30px;
+  margin-bottom: 2rem;
+}
+
+.contactme__list--icons {
+  cursor: pointer;
+  width: 35px;
+  height: 35px;
+}
+
+.contactme__list--icons:hover {
+  -webkit-filter: invert(69%) sepia(22%) saturate(7213%) hue-rotate(2deg) brightness(108%) contrast(102%);
+          filter: invert(69%) sepia(22%) saturate(7213%) hue-rotate(2deg) brightness(108%) contrast(102%);
+}
+
+.contactme__list--link {
+  text-decoration: none;
+  color: orange;
+}
+
+.contactme__list--link:hover {
+  text-decoration: underline;
+}
+
+.askme {
+  height: auto;
+  padding-top: 10vh;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  border-top: 2px solid white;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(128, 128, 128, 0)), to(rgba(255, 165, 0, 0))), url("../images/circuit.jpg") center top;
+  background: linear-gradient(to right, rgba(128, 128, 128, 0), rgba(255, 165, 0, 0)), url("../images/circuit.jpg") center top;
+  background-size: cover;
+}
+
+.askme__heading {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.askme__subheading {
+  display: inline-block;
+  padding: 10px 10px;
+  border-radius: 1em;
+  background-color: rgba(128, 128, 128, 0.6);
+  margin-bottom: 25px;
+  border: 3px solid rgba(255, 165, 0, 0.5);
+}
+
+/*this scss is used to style the content of the 'Gallery' page
+of the website*/
+.gallery {
+  /*styling the gallery section which holds all the main content of the 'Gallery' page*/
+  height: auto;
+  padding-top: 40vh;
+  border-bottom: 2px solid white;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(255, 165, 0, 0.3)), to(rgba(128, 128, 128, 0.4))), url("../images/flower.jpg") center top;
+  background: linear-gradient(to right, rgba(255, 165, 0, 0.3), rgba(128, 128, 128, 0.4)), url("../images/flower.jpg") center top;
+  background-size: contain;
+}
+
+.gallery__table {
+  margin-left: 150px;
+  display: inline-block;
+  border-collapse: collapse;
+  width: auto;
+}
+
+.gallery__table--img {
+  border: 2px solid white;
+  width: 300px;
+  height: 300px;
+}
+
+.gallery__table--img:hover {
+  cursor: pointer;
+  border: 6px solid orange;
+}
+
+.gallery__heading {
+  margin-left: 400px;
+  padding-bottom: 30px;
+  font-size: 50px;
+  margin-bottom: 2rem;
+  color: orangered;
+}
+
+td,
+th {
+  color: black;
+  border: 1px solid #dddddd;
+  text-align: center;
+  padding: 8px;
+}
+
+tr {
+  background-color: rgba(128, 128, 128, 0.5);
+}
+
+.notice {
+  margin-left: 150px;
+}
+
+.external_link {
+  text-decoration: none;
+  font-weight: bold;
+  color: orangered;
+}
+
+.external_link:hover {
+  text-decoration: underline;
+}
+
+.innovations {
+  color: white;
+}
+
+.Comments {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 80%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: whitesmoke;
+}
+
+.Comments__container {
+  width: 500px;
+  border: 2px solid black;
+  border-radius: 20px;
+  padding: 15px 15px;
+}
+
+.Comments__container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+textarea {
+  height: 30px;
+  width: 100%;
+  border: none;
+  margin-bottom: 10px;
+  outline: none;
+}
+
+#comment,
+#cancel {
+  padding: 10px 10px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#comment {
+  color: white;
+  background-color: orange;
+  display: none;
+}
+
+#cancel {
+  color: #333;
+  background-color: silver;
+}
+
+.usr_comments {
+  background-color: white;
+  color: black;
+  text-decoration: none;
+  list-style: none;
+}
+
+#name {
+  height: 30px;
+  border: none;
+  outline: none;
+}
+
+.saved {
+  height: auto;
+  padding-top: 20vh;
+}
+
+.saved__heading {
+  padding-bottom: 20px;
+  margin-bottom: 1rem;
+}
+
+fieldset {
+  padding: 20px 20px;
+}
+
+body {
+  /*styling the overall body of all pages*/
+  background-color: gray;
+  color: white;
+  height: 100vh;
+  line-height: 1;
+  /* line space*/
+}
+
+.word_highlight {
+  /* styling font-size and adding an orangered color to highlight words*/
+  font-size: 40px;
+  color: orangered;
+}
+
+h1 {
+  /*styling all h1 paragraphs fonts and margin for proper spacing*/
+  font-size: 70px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+h2 {
+  /*styling all h2 paragraphs fonts*/
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.header_home {
+  /*styling background color of header area*/
+  background-color: rgba(255, 165, 0, 0.6);
+}
+
+.menu-nav {
+  /*styling of menu navigation*/
+  list-style-type: none;
+  /*removing bullet point from list items*/
+}
+
+.menu-nav li {
+  /*styling list menu items in menu area*/
+  font-size: 20px;
+  font-weight: bold;
+  display: inline-block;
+  /* a mixin that will be used to control transition action of colors etc*/
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  /*using the mixin created to add a delay in color transition*/
+}
+
+.menu-nav li:hover {
+  /*adding orange filter to menu items when hovering*/
+  -webkit-filter: invert(69%) sepia(22%) saturate(7213%) hue-rotate(2deg) brightness(108%) contrast(102%);
+          filter: invert(69%) sepia(22%) saturate(7213%) hue-rotate(2deg) brightness(108%) contrast(102%);
+}
+
+.menu-nav a {
+  /*styling links within menu items (Home, About Me, Gallery)*/
+  padding-left: 5px;
+  color: white;
+  text-decoration: none;
+}
+
+.menu-nav1 {
+  /*styling of menu navigation*/
+  list-style-type: none;
+  /*removing bullet point from list items*/
+}
+
+.menu-nav1 li {
+  /*styling list menu items in menu area*/
+  font-size: 20px;
+  font-weight: bold;
+  display: inline-block;
+  /* a mixin that will be used to control transition action of colors etc*/
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  /*using the mixin created to add a delay in color transition*/
+}
+
+.menu-nav1 li:hover {
+  /*adding orange filter to menu items when hovering*/
+  -webkit-filter: invert(69%) sepia(22%) saturate(7213%) hue-rotate(2deg) brightness(108%) contrast(102%);
+          filter: invert(69%) sepia(22%) saturate(7213%) hue-rotate(2deg) brightness(108%) contrast(102%);
+}
+
+.menu-nav1 a {
+  /*styling links within menu items (Home, About Me, Gallery)*/
+  padding-left: 5px;
+  color: white;
+  text-decoration: none;
+}
+
+header {
+  /*styling of the header so that it stands above all content when sliding*/
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+  padding: 1rem;
+}
+
+main {
+  /*styling main area of page*/
+  height: 100%;
+  width: 100%;
+}
+
+main .social-icons {
+  /*styling of social icons*/
+  position: fixed;
+  bottom: 0.2rem;
+  left: 1rem;
+}
+
+main .social-icons a {
+  /*styling links embedded within social icons*/
+  padding: 0.4rem;
+  /* a mixin that will be used to control transition action of colors etc*/
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+main .social-icons a:hover {
+  -webkit-filter: invert(69%) sepia(22%) saturate(7213%) hue-rotate(2deg) brightness(108%) contrast(102%);
+          filter: invert(69%) sepia(22%) saturate(7213%) hue-rotate(2deg) brightness(108%) contrast(102%);
+}
+
+footer {
+  font-size: 14px;
+  position: fixed;
+  bottom: 0.4rem;
+  /* positions the content in footer to the bottom of the page*/
+  right: 0.5rem;
+  /*moves footer content to right side(bottom)*/
+  color: white;
+  background-color: rgba(128, 128, 128, 0.4);
+}
+
+.home-icon {
+  /*styling of menu icons at the top of page*/
+  margin-left: 30px;
+  width: 25px;
+  height: 25px;
+}
+
+h3 {
+  /*styling all h3 paragraphs*/
+  color: white;
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+
+#message {
+  /* styling of message box text in 'Ask Me' section*/
+  height: 100%;
+  padding: 40px 40px;
+}
+
+#firstname {
+  /*styling of first name in form in 'Ask Me' section*/
+  padding-left: 5rem;
+}
+
+#lastname {
+  /*styling last name in form in 'Ask Me' section*/
+  padding-left: 5rem;
+}
+
+label {
+  /*styling of labels from form in 'Ask Me' section*/
+  font-weight: bold;
+  color: white;
+}
+
+input {
+  /*adding margin space for form inputs*/
+  margin-bottom: 10px;
+}
+
+.filling_form {
+  /*styling of the form in 'About Me' section*/
+  display: inline-block;
+  /*displaying the div section as inline-block to align it with a tight border*/
+  border-radius: 2em;
+  background-color: rgba(128, 128, 128, 0.8);
+  padding: 20px 20px;
+  margin-bottom: 20px;
+  border: 3px solid rgba(255, 165, 0, 0.5);
+}
+
+#submit-btn {
+  /*styling of submit button for form in 'About Me' section*/
+  cursor: pointer;
+  border-radius: 1em;
+  font-size: 20px;
+  padding: 10px 10px;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: rgba(255, 165, 0, 0.5);
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+.add-icon-topics,
+.add-icon-topic-img,
+.add-icon-text,
+.add-icon-author-img,
+.add-icon-quote,
+.add-icon-details {
+  -webkit-filter: invert(69%) sepia(22%) saturate(7213%) hue-rotate(2deg) brightness(108%) contrast(102%);
+          filter: invert(69%) sepia(22%) saturate(7213%) hue-rotate(2deg) brightness(108%) contrast(102%);
+  width: 13px;
+  height: 13px;
+  /* a mixin that will be used to control transition action of colors etc*/
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  /*using the mixin created to add a delay in color transition*/
+}
+
+.add-icon-topics:hover,
+.add-icon-topic-img:hover,
+.add-icon-text:hover,
+.add-icon-author-img:hover,
+.add-icon-quote:hover,
+.add-icon-details:hover {
+  /*adding orange filter to menu items when hovering*/
+  cursor: pointer;
+}
+
+.key_highlight {
+  /* styling font-size and adding an orangered color to highlight words*/
+  color: orange;
+}
+
+.like-icon1,
+.like-icon2,
+.like-icon3,
+.like-icon4,
+.like-icon5,
+.like-icon6,
+.like-icon7,
+.like-icon8 {
+  width: 15px;
+  height: 15px;
+}
+
+.like-icon1:hover,
+.like-icon2:hover,
+.like-icon3:hover,
+.like-icon4:hover,
+.like-icon5:hover,
+.like-icon6:hover,
+.like-icon7:hover,
+.like-icon8:hover {
+  /*adding heart icon filter to like/unlike icon when hovering*/
+  cursor: pointer;
+  -webkit-filter: invert(25%) sepia(43%) saturate(6766%) hue-rotate(288deg) brightness(114%) contrast(115%);
+          filter: invert(25%) sepia(43%) saturate(6766%) hue-rotate(288deg) brightness(114%) contrast(115%);
+}
+
+.key_highlight {
+  /* styling font-size and adding an orangered color to highlight words*/
+  color: orange;
+}
+/*# sourceMappingURL=main.css.map */

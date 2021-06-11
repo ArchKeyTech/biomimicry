@@ -1,0 +1,88 @@
+@import "settings"; //importing settings scss to home page
+
+.home {
+  //stylinh of the entire home page
+  height: 90%;
+  padding-top: 40vh;
+  /*overflow:hidden eliminates scrollbar on homepage, make all content visible*/
+  align-items: center;
+  text-align: center;
+  border-bottom: 2px solid white;
+  background: linear-gradient(
+      /* creating a color gradient for the background using the two color variables created*/
+        to right,
+      rgba($primary-color, 0.4),
+      rgba($secondary-color, 0.6)
+    ),
+    url("../images/butterfly.jpg") center top; //adding butterfly image to background
+  background-size: cover;
+
+  &__whatis {
+    //styling of "What is biomimicry" section
+    height: auto;
+    padding-top: 10vh;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(
+        to right,
+        rgba($primary-color, 0.3),
+        rgba($primary-color, 0.9)
+      ),
+      url("../images/plants.jpg") center top; // adding image of plants in background
+
+    &--description {
+      //styling description text font size and padding adjusted to center the text box
+      border: 3px solid rgba(orange, 0.5); // adding orange border around description
+      color: white; //color of text white
+      background-color: rgba(
+        $primary-color,
+        0.7
+      ); // background color set to gray with some transparency
+      font-size: 16px;
+      margin-top: 10px;
+      margin-left: 200px;
+      margin-right: 200px;
+      border-radius: 2em;
+      padding: 10px 10px;
+      align-items: center;
+      text-align: left;
+    }
+    &--headings {
+      //styling of headings
+      margin-top: 10px;
+      color: white;
+    }
+  }
+}
+
+.quote {
+  // styling of the quote section
+  margin-top: 30px;
+
+  &__text {
+    //styling quote text alignment, color and border
+    padding: 10px;
+    display: inline-block;
+    background-color: rgba($primary-color, 0.7);
+    border: 2px solid orange;
+    border-radius: 1em;
+    margin-bottom: 20px;
+
+    &--img {
+      //styling image of quote author size and border color
+      width: 5em;
+      height: 5em;
+      border-radius: 50%;
+      border: 2px solid orange;
+    }
+  }
+}
+
+.internal_link {
+  //styling internal links color and hover effect
+  text-decoration: none;
+  color: orange;
+  &:hover {
+    text-decoration: underline;
+  }
+}
